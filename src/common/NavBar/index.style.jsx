@@ -1,13 +1,21 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
-    height: 80px;
+    height: 50px;
     width: 100vw;
+    padding-left: 20px;
+    padding-right: 20px;
     position: absolute;
     background-color: rgba(100, 100, 100, 0.5);
     display: flex;
     align-items: center;
     justify-content: space-between;
+`
+export const ConfigForm = styled.div`
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
 `
 
 export const Logo = styled.div`

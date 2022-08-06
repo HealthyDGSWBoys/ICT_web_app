@@ -8,7 +8,7 @@ import Footer from '../common/Footer'
 import routes from './routes'
 
 const Core = styled.div`
-  margin-top: ${props => props.nav ? "80" : "0"}px;
+  margin-top: ${props => props.nav ? "50" : "0"}px;
   min-height: 100vh;
 `
 const Content = styled.div`
