@@ -6,6 +6,7 @@ import NavBar from '../common/NavBar'
 import Footer from '../common/Footer'
 
 import routes from './routes'
+import test from "../component/test";
 
 const Core = styled.div`
   margin-top: ${props => props.nav ? "80" : "0"}px;
@@ -30,7 +31,7 @@ const Router = () => {
   return (
     <>
       <Content>
-          <NavBar/>
+          { renderInfo.nav ? <NavBar/> : null}
           <Core nav={renderInfo.nav}>
               <Routes>
                   {
@@ -44,7 +45,7 @@ const Router = () => {
               </Routes>
           </Core>
       </Content>
-      <Footer/>
+        { renderInfo.nav ? <Footer/> : null}
     </>
   )
 }
