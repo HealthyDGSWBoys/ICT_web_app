@@ -9,7 +9,7 @@ import routes from './routes'
 import test from "../component/test";
 
 const Core = styled.div`
-  margin-top: ${props => props.nav ? "80" : "0"}px;
+  margin-top: ${props => props.nav ? "50" : "0"}px;
   min-height: 100vh;
 `
 const Content = styled.div`

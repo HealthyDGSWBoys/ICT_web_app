@@ -3,7 +3,9 @@ const Render = () => {
     
     return (
         <S.Main>
-            네브바 입니다
+            <S.ConfigForm>
+                로그인 | 회원가입
+            </S.ConfigForm>
         </S.Main>
     )
 }
