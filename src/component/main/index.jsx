@@ -6,6 +6,18 @@ const Render = () => {
             {/* <img src={image} width='200'></img> */}
             <S.MainContent></S.MainContent>
             <S.MyRecord></S.MyRecord>
+            <S.TrainingList>
+                <S.TestBox></S.TestBox>
+                <S.TestBox></S.TestBox>
+                <S.TestBox></S.TestBox>
+                <S.TestBox></S.TestBox>
+                <S.TestBox></S.TestBox>
+                <S.TestBox></S.TestBox>
+                <S.TestBox></S.TestBox>
+                <S.TestBox></S.TestBox>
+                <S.TestBox></S.TestBox>
+                <S.TestBox></S.TestBox>
+            </S.TrainingList>
         </S.Main>
     )
 }
