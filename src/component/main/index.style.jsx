@@ -35,8 +35,8 @@ export const TrainingList = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 720px;
-    border: 4px solid black;   
+    width: 450px;
+    row-gap: 20px;
     box-sizing: border-box;
 `
 
@@ -44,6 +44,18 @@ export const TestBox = styled.div`
     display: flex;
     width: 100px;
     height: 100px;
-    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    word-break: keep-all;
+    transition: .15s ease-in-out;
     box-sizing: border-box;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 3px 3px 3px grey;
+    }
+    > span {
+        text-align: center;
+        font-size: 16px;
+    }
 `
