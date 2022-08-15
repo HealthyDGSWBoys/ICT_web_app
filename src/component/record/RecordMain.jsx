@@ -3,7 +3,7 @@ import * as R from "./RecordMain.style";
 import { Link } from "react-router-dom";
 
 const RecordMain = () => {
-  // 실제에서는 배열에 날짜가 들어가야 한다
+  // 정방형 사진이여야만 한다
   const dum = [
     "220805",
     "220806",
@@ -31,9 +31,16 @@ const RecordMain = () => {
   return (
     <R.Wrapper>
       <R.Content>
-        {/* <Link to={`${username}/write`}>
-          <R.WriteB>d</R.WriteB>
-        </Link> */}
+        <Link to={`${username}/write`}>
+          <R.WriteB>
+            <R.WirteBPlus>
+                +
+            </R.WirteBPlus>
+            <R.WirteBComment>
+                오늘 작성된 기록이 없습니다
+            </R.WirteBComment>
+          </R.WriteB>
+        </Link>
         {dum.map((i, idx) => (
           <Link key={i} to={`${username}/${i}`}>
             <R.PostWrapper
