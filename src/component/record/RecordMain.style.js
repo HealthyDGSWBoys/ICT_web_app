@@ -4,12 +4,13 @@ export const Wrapper = styled.div`
     width:100vw;
     height:100%;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
 `
 
 export const Content = styled.section`
-    margin:100px 30px;
+    margin:100px 50px 20px 50px;
     max-width:1100px; 
     display:grid;
     grid-template-rows:repeat(3,1fr);
@@ -78,4 +79,27 @@ export const PostInfo = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
+`
+
+
+export const Loading = styled.div`
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    margin-top:20px;
+    margin-bottom:80px;
+    border:solid white 10px;
+    border-top:solid #808080 10px;
+    box-sizing:border-box;
+
+    @keyframes rotateLoading {
+        from {
+            transform: rotate(0deg)
+        }
+        to{
+            transform:rotate(360deg)
+        }
+    }
+
+    animation:rotateLoading 1s infinite;
 `
