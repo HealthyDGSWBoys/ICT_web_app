@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 import { useInView } from "react-intersection-observer";
 
+import Modal from "../../common/Modal/Modal";
+
 const RecordMain = () => {
 
   const [isLoading,setIsLoading] = useState(false)
@@ -34,6 +36,8 @@ const RecordMain = () => {
 
   const [showInfo, setShowInfo] = useState(-1);
 
+
+  /** 날짜를 문자열로 받아서 년.월.일 의 형태로 반환하는 함수 */
   function makeDateForm(key) {
     return [
       Number(key.slice(0, 2)),
@@ -56,9 +60,14 @@ const RecordMain = () => {
 
   return (
     <R.Wrapper>
+
+      <Modal name="hi" visible="true" children="hi">
+
+      </Modal>
+
       <R.Content>
         <Link to={`${username}/write`}>
-          <R.WriteB>
+          <R.WriteB>  
             <R.WirteBPlus>+</R.WirteBPlus>
             <R.WirteBComment>오늘 작성된 기록이 없습니다</R.WirteBComment>
           </R.WriteB>
