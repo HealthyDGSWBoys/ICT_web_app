@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import * as M from "./Modal.style";
 
+import Portal from "./Portal"
+
 const Modal = ({
   name,
   onClose,
@@ -31,7 +33,7 @@ const Modal = ({
    @Todo 모달의 로직을 다 포함한 컴포넌트 넘기기
    */
   return (
-    <>
+    <Portal elementId="modal-root">
       <M.ModalOverlay visible={visible} />
       <M.ModalWrapper
         visible={visible}
@@ -43,7 +45,7 @@ const Modal = ({
           {children}
         </M.ModalInner>
       </M.ModalWrapper>
-    </>
+    </Portal>
   );
 };
 
