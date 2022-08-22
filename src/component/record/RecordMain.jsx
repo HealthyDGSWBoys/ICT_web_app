@@ -5,15 +5,23 @@ import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 
 import Modal from "../../common/Modal/Modal";
+import Write from "./write/Write";
 
 const RecordMain = () => {
-
-  const [isLoading,setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
   const [intersector, inView] = useInView();
 
+  const [modalVisible, setModalVisible] = useState(false);
+  function openModal() {
+    setModalVisible(true);
+  }
+  function closeModal() {
+    setModalVisible(false);
+  }
+
   useEffect(() => {
-      console.log(inView)
-  },[inView])
+    console.log(inView);
+  }, [inView]);
 
   // 정방형 사진이여야만 한다
   const dum = [
@@ -36,7 +44,6 @@ const RecordMain = () => {
 
   const [showInfo, setShowInfo] = useState(-1);
 
-
   /** 날짜를 문자열로 받아서 년.월.일 의 형태로 반환하는 함수 */
   function makeDateForm(key) {
     return [
@@ -46,32 +53,37 @@ const RecordMain = () => {
     ].join(" . ");
   }
 
-
   useEffect(() => {
     if (inView) {
-      setIsLoading(true)
-      console.log("서버 요청")
+      setIsLoading(true);
+      console.log("서버 요청");
       setTimeout(() => {
-        setIsLoading(false)
-      },2000)
+        setIsLoading(false);
+      }, 2000);
     }
-  },[inView])
-
+  }, [inView]);
 
   return (
     <R.Wrapper>
-
-      <Modal name="hi" visible="true" children="hi">
-
-      </Modal>
+      {modalVisible && (
+        <Modal
+          name="hi"
+          onClose={closeModal}
+          maskCloseable={true}
+          visible="true"
+          menu="안녕"
+        >
+         <Write/>
+        </Modal>
+      )}
 
       <R.Content>
-        <Link to={`${username}/write`}>
-          <R.WriteB>  
-            <R.WirteBPlus>+</R.WirteBPlus>
-            <R.WirteBComment>오늘 작성된 기록이 없습니다</R.WirteBComment>
-          </R.WriteB>
-        </Link>
+        <R.WriteB onClick={openModal}>
+          <R.WirteBPlus>+</R.WirteBPlus>
+          <R.WirteBComment >
+            오늘 작성된 기록이 없습니다
+          </R.WirteBComment>
+        </R.WriteB>
         {dum.map((i, idx) => (
           <Link key={i} to={`${username}/${i}`}>
             <R.PostWrapper
@@ -86,7 +98,7 @@ const RecordMain = () => {
 
         <div ref={intersector} />
       </R.Content>
-      {isLoading && <R.Loading/>}
+      {isLoading && <R.Loading />}
     </R.Wrapper>
   );
 };

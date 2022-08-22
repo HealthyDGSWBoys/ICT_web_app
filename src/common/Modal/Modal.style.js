@@ -25,16 +25,28 @@ export const ModalWrapper = styled.div`
   outline: 0;
 `;
 
-const ModalInner = styled.div`
+export const ModalInner = styled.div`
   box-sizing: border-box;
   position: relative;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
   background-color: #fff;
   border-radius: 10px;
-  width: 360px;
-  max-width: 480px;
   top: 50%;
   transform: translateY(-50%);
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 10px 0px;
+  width:fit-content;
+  transition:width 0.5s;
 `;
+
+export const CloseButton = styled.button`
+    border:none;
+    position:absolute;
+    right:15px;
+    top:15px;
+    background:none;
+    font-weight:bold;
+    font-size:15px;
+    color:#0095f6;
+    cursor:pointer;
+` 

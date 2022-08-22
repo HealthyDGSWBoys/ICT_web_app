@@ -41,6 +41,7 @@ export const WriteB = styled.div`
     justify-content:center;
     align-items:center;
     color:gray; 
+    cursor:pointer;
 `
 
 export const WirteBPlus = styled.div`
