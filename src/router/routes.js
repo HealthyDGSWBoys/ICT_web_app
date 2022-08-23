@@ -6,10 +6,10 @@ import Introduce from "../component/introduce"
 
 export default [
     { path: "", component: <Main />, nav: true, footer: true },
-    { path: "test", component: <Test />, nav: true, footer: true },
     { path: "*", component: <NotFound />, nav: false, footer: false },
+    { path: "test", component: <Test />, nav: true, footer: true },
     { path: "record", component: <Record />, nav: true, footer: true },
-    { path: "introduce", component:<Introduce/>, nav:true, footer:true},
+    { path: "introduce", component:<Introduce/>, nav:true, footer:true },
 ]
 
 // 이곳에 컴포넌트를 등록하면 됩니다
