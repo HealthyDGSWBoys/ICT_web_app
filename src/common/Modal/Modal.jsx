@@ -29,9 +29,6 @@ const Modal = ({
     }
   };
 
-  /**
-   @Todo 모달의 로직을 다 포함한 컴포넌트 넘기기
-   */
   return (
     <Portal elementId="modal-root">
       <M.ModalOverlay visible={visible} />

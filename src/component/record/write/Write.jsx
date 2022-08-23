@@ -1,21 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import * as W from "./Write.style"
-import fileSvg from "../../../static/record/reciveFile.svg"
+
+import DropBox from './DropBox';
+
 
 const Write = () => {
 
     // 이미지가 존재하는지
-    const [imgExist,setImgExist] = useState(false);
+    const [droppedFiles,setDroppedFiles] = useState([])
+    const handleFileDrop = useCallback(
+        (item) => {
+            if (item){
+                const file = item.files
+                setDroppedFiles(file)
+            }
+        },[setDroppedFiles]
+    )
 
     return (
         <W.Wrapper>
             <W.Menu>
-                {imgExist && <button>다음</button>}
+                {droppedFiles.length > 0 && <button>다음</button>}
             </W.Menu>
-            <W.ImgPlace>
-               <img src={fileSvg}/> 
-               <input type="file"/>
-            </W.ImgPlace>
+            <DropBox onDrop={handleFileDrop} files={droppedFiles}/>
         </W.Wrapper>
     );
 };

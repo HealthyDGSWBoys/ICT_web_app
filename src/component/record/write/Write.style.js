@@ -12,8 +12,9 @@ export const Wrapper = styled.div`
 `;
 
 export const Menu = styled.header`
-  display: flex;
   height: 35px;
+  display: flex;
+  flex-direction:row-reverse;
   justify-content: space-between;
   align-items: center;
   > button {
@@ -22,14 +23,7 @@ export const Menu = styled.header`
     color: #0095f5;
     font-weight: bold;
     font-size: 17px;
-    margin-right: 17px;
+    margin:0px 17px;
+    cursor:pointer;
   }
-`;
-export const ImgPlace = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 `;
