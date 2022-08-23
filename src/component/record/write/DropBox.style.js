@@ -14,10 +14,16 @@ export const Wrapper = styled.div`
   > img {
     width: 120px;
     -webkit-user-drag: none; 
+    @media (max-width:1000px){
+      width:80px;
+    }
   }
   >div{
     font-size:35px;
     margin-bottom:0px;
+    @media (max-width:800px) {
+      font-size:25px; 
+    }
   }
   > label {
     display: inline-block;

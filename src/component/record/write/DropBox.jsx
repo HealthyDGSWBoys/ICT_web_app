@@ -1,45 +1,21 @@
-import React,{useMemo} from "react";
-import { useDrop } from "react-dnd/dist/hooks";
-import { NativeTypes } from "react-dnd-html5-backend";
+import React,{ useRef, useState} from "react";
 import * as D from "./DropBox.style";
 
 import fileSvg from "../../../static/record/reciveFile.svg";
 
-const DropBox = ({props,files}) => {
-  const onDrop = props;
-  const [{ canDrop, isOver }, drop] = useDrop(
-    () => ({
-      accept: [NativeTypes.FILE],
-      drop(item) {
-        if (onDrop) {
-          onDrop(item)
-        }
-      },
-      canDrop(item) {
-        console.log('canDrop', item.files, item.items)
-        return true
-      },
-      hover(item) {
-        console.log('hover', item.files, item.items)
-      },
-      collect: (monitor) => {
-        const item = monitor.getItem()
-        if (item) {
-          console.log('collect', item.files, item.items)
-        }
-        return {
-          isOver: monitor.isOver(),
-          canDrop: monitor.canDrop(),
-        }
-      },
-    }),
-    [props],
-  )
+const DropBox = ({setIsExist}) => {
+  const [isDragging,setIsDragging] = useState(false);
+
+  // 선택했던 파일들의 고유값
+  const filedId = useRef(0);
+
+  // 드래그 이벤트를 감지하는 ref참조 변수
+  const dragRef = useRef(null);
 
   return (
     <D.Wrapper>
       <img src={fileSvg} />
-      <div>{canDrop ? "놓으세요" : "파일을 드레그하세요"}</div>
+      <div>{isDragging ? "요기 놓으세요" : "파일을 드레그하세요"}</div>
       <label htmlFor="fileBox">업로드</label>
       <input type="file" id="fileBox"/>
     </D.Wrapper>
