@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-      width: 100%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -9,23 +9,28 @@ export const Wrapper = styled.div`
   align-items: center;
 
   > * {
-  margin:15px;
+    margin: 25px;
   }
-  > img{
-    width:120px;
+  > img {
+    width: 120px;
+    -webkit-user-drag: none; 
   }
-  >label{
+  >div{
+    font-size:35px;
+    margin-bottom:0px;
+  }
+  > label {
     display: inline-block;
-  padding: .5em .75em;
-  color:white;
-  font-size: inherit;
-  line-height: normal;
-  vertical-align: middle;
-  background-color: #0095f5;
-  cursor: pointer;
-  border-radius: .25em;
+    padding: 0.5em 0.75em;
+    color: white;
+    font-size: inherit;
+    line-height: normal;
+    vertical-align: middle;
+    background-color: #0095f5;
+    cursor: pointer;
+    border-radius: 0.25em;
   }
-  > input{
-    display:none;
+  > input {
+    display: none;
   }
-`
+`;

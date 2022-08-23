@@ -38,8 +38,8 @@ const DropBox = ({props,files}) => {
 
   return (
     <D.Wrapper>
-      {canDrop ? "놓으세요" : "파일을 드레그하세요"}
       <img src={fileSvg} />
+      <div>{canDrop ? "놓으세요" : "파일을 드레그하세요"}</div>
       <label htmlFor="fileBox">업로드</label>
       <input type="file" id="fileBox"/>
     </D.Wrapper>
