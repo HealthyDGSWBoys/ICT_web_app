@@ -6,24 +6,17 @@ import DropBox from './DropBox';
 
 const Write = () => {
 
-    // 드롭된 이미지
-    const [droppedFiles,setDroppedFiles] = useState([]);
-    const handleFileDrop = useCallback(
-        (item) => {
-            if (item) {
-                const files = item.files
-                setDroppedFiles(files)
-            }
-        },
-        [setDroppedFiles],
-    )
+    // 이미지 유무
+    const [isExist,setIsExist] = useState(false)
+
+
 
     return (
         <W.Wrapper>
-            {/* <W.Menu>
-                {droppedFiles.length > 0 && <button>다음</button>}
-            </W.Menu> */}
-            {/* <DropBox setIsDragging={setIsExist}/> */}
+            <W.Menu>
+                {isExist && <button>다음</button>}
+            </W.Menu>
+            <DropBox setIsExist={setIsExist}/>
         </W.Wrapper>
     );
 };
