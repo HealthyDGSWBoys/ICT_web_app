@@ -11,18 +11,19 @@ const Write = () => {
     const handleFileDrop = useCallback(
         (item) => {
             if (item){
-                const file = item.files
-                setDroppedFiles(file)
+                const files = item.files
+                setDroppedFiles(files)
             }
         },[setDroppedFiles]
     )
+
 
     return (
         <W.Wrapper>
             <W.Menu>
                 {droppedFiles.length > 0 && <button>다음</button>}
             </W.Menu>
-            <DropBox onDrop={handleFileDrop} files={droppedFiles}/>
+            <DropBox onDrop={handleFileDrop}/>
         </W.Wrapper>
     );
 };
