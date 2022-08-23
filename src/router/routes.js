@@ -10,6 +10,7 @@ export default [
     { path: "test", component: <Test />, nav: true, footer: true },
     { path: "record", component: <Record />, nav: true, footer: true },
     { path: "introduce", component:<Introduce/>, nav:true, footer:true },
+    { path: "recommend", component:<Recommend/>, nav:true, footer:true }
 ]
 
 // 이곳에 컴포넌트를 등록하면 됩니다
