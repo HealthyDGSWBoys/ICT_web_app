@@ -49,15 +49,15 @@ let FoodPart = styled.div`
 `
 
 let ExerciseImg = styled.img`
-    width: 290px;
-    height: 290px;
+    width: 300px;
+    height: 300px;
     margin-top: 20px;
     background-color: white;
 `
 
 let FoodImg = styled.img`
-    width: 290px;
-    height: 290px;
+    width: 300px;
+    height: 300px;
     margin-top: 20px;
     background-color: white;
 `
@@ -107,7 +107,7 @@ function Recommend(){
                     <FoodTit>{foodName}</FoodTit>
                     <FoodCom>{foodExplain}</FoodCom>
                 </FoodPart>
-                
+
             </Box>
         </HeadBox>
         
