@@ -3,6 +3,7 @@ import Test from '../component/test'
 import NotFound from "../common/NotFound"
 import Record from '../component/record'
 import Introduce from "../component/introduce"
+import Recommend from '../component/recommend/Recommend'
 
 export default [
     { path: "", component: <Main />, nav: true, footer: true },
