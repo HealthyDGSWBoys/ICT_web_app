@@ -7,17 +7,14 @@ import food_logo from './food_logo.png'
 let HeadBox = styled.div`
     display: flex;
     justify-content: center;
-    border-right: black 2px solid;
-    border-left: black 2px solid;
-    border-top: black 2px solid;
-    border-bottom: black 2px solid;
     width: 100%;
     height: 100%;
+    
 `
 
 let Box = styled.div`
     width: 1100px;
-    height: 750px;
+    height: 700px;
     margin-top: 50px;
     /* border-right: black 2px solid;
     border-left: black 2px solid;
@@ -30,7 +27,7 @@ let Box = styled.div`
 let ExercisePart = styled.div`
     width: 100%;
     height: 100%;
-    background-color: aliceblue;
+    background-color: #eee;
     margin-right: 50px;
     border-radius: 15px;
     display: flex;
@@ -43,7 +40,7 @@ let FoodPart = styled.div`
     width: 100%;
     height: 100%;
     margin-left: 50px;
-    background-color: antiquewhite;
+    background-color: #eee;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -98,16 +95,19 @@ function Recommend(){
     return(
         <HeadBox>
             <Box>
+
                 <ExercisePart>
                     <ExerciseImg src={exercise_logo}></ExerciseImg>
                     <ExerciseTit>{exerciseName}</ExerciseTit>
                     <ExerciseCom>{exerciseExplain}</ExerciseCom>
                 </ExercisePart>
+
                 <FoodPart>
                     <FoodImg src={food_logo}></FoodImg>
                     <FoodTit>{foodName}</FoodTit>
                     <FoodCom>{foodExplain}</FoodCom>
                 </FoodPart>
+                
             </Box>
         </HeadBox>
         

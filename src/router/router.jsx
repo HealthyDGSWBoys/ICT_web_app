@@ -10,6 +10,7 @@ import test from "../component/test";
 
 const Core = styled.div`
   margin-top: ${props => props.nav ? "50" : "0"}px;
+  width: 100vw;
   min-height: 100vh;
 `
 const Content = styled.div`
