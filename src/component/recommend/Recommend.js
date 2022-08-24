@@ -88,7 +88,7 @@ function Recommend(){
 
     useEffect(()=>{
         // axios.get('')
-        // .then((result)=>{setExerciseName(),setFoodName(),setExerciseExplain(),setFoodExplain()})
+        // .then((result)=>{setExerciseName(),setExerciseExplain(),setFoodName(),setFoodExplain()})
         // .catch(()=>{})
     })
 
