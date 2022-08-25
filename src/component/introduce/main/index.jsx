@@ -4,12 +4,16 @@ import * as S from "./index.style";
 import Info from "./info";
 
 const Render = ({ info }) => {
-  const { title, muscle, human } = info;
+  const { title, muscle, human, animation } = info;
   const dom = useRef();
   let app;
   useEffect(() => {
     if (app == undefined) {
-      app = new App(dom.current, human);
+      app = new App(
+        dom.current, 
+        human,
+        animation
+      );
     }
   }, [dom]);
   return (

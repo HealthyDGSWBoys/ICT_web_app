@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {                              
     entry: './src/index.js', //엔트리 포인트
@@ -33,6 +34,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: false,
             template: path.resolve(__dirname, 'src', 'index.html'),
+        }),
+        new FaviconsWebpackPlugin({
+            logo: 'src/static/favicon/favicon.ico',
         }),
     ]
 }
