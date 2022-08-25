@@ -87,10 +87,12 @@ function Recommend(){
     let [foodExplain, setFoodExplain] = useState('중간크기의 바나나 118g 기준 105kcal이다. 또한 비타민C(일일 섭취량의 11%), 비타민B6, 엽산(비타민B9, 33%), 비타민A, 베타-카로틴, 식이섬유질(3.1g), 마그네슘(8%), 구리 (10%), 망간 (14%) 그리고 풍부한 칼륨(400㎎ 안팎, 9%)을 함유하고 있으며 지방과 나트륨, 그리고 콜레스테롤은 전혀 없다');
 
     useEffect(()=>{
-        // axios.get('')
-        // .then((result)=>{setExerciseName(),setExerciseExplain(),setFoodName(),setFoodExplain()})
-        // .catch(()=>{})
-    })
+        axios.get('')
+        .then((result)=>{
+            //setExerciseName(),setExerciseExplain(),setFoodName(),setFoodExplain()
+        })
+        .catch(()=>{})
+    },[])
 
     return(
         <HeadBox>
