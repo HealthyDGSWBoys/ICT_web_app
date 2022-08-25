@@ -17,9 +17,13 @@ export const StarContainer = styled.div`
   align-items: center;
   justify-content: left;
 
+  padding-left: 10px;
+  box-sizing: border-box;
+
   width: 100%;
   height: 50px;
-  background-color: white;
+  background-color: powderblue;
+  color: white;
 
   border-radius: 8px;
 

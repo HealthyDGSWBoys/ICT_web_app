@@ -31,7 +31,7 @@ const Render = () => {
       <S.SplitLine />
 
       <S.RecommandBox>
-        <S.Title>조금더 쉬운 운동</S.Title>
+        <S.Title style={{ fontSize: "0.9em" }}>조금더 쉬운 운동</S.Title>
         {makeEasy}
       </S.RecommandBox>
     </S.Main>

@@ -4,15 +4,19 @@ export const Explanation = styled.div`
   width: calc(90% - 5px);
   height: 30%;
 
-  background-color: greenyellow;
+  background-color: #ffcccc;
   color: black;
+
+  border-radius: 15px;
 
   font-size: 15px;
   font-weight: bolder;
 
   /* border-radius: 8px; */
 
-  padding-left: 5px;
+  padding-left: 10px;
+  padding-top: 5px;
+  box-sizing: border-box;
 
   h3 {
     margin-top: 5px;

@@ -53,8 +53,8 @@ export const Search = styled.button`
 
   border: none;
   border-radius: 0px 20px 20px 0px;
-  box-sizing: border-box;
   padding-right: 8px;
+  box-sizing: border-box;
 
   cursor: pointer;
   :hover {

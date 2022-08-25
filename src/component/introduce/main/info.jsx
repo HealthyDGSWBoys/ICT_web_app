@@ -6,9 +6,9 @@ import * as S from "./info.style";
 const Render = () => {
   return (
     <S.MainContainer>
-      <S.ContentContainer>
-        <Star />
-      </S.ContentContainer>
+      {/* <S.ContentContainer> */}
+      <Star />
+      {/* </S.ContentContainer> */}
 
       <Explanation />
 

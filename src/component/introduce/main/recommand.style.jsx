@@ -10,7 +10,7 @@ export const Main = styled.div`
   width: 90%;
   height: calc(20% - 11px);
 
-  border-radius: 0px 0px 8px 8px;
+  border-radius: 15px;
 
   background-color: #cfffe5;
   margin-bottom: 11px;
