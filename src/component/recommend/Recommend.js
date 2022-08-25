@@ -16,10 +16,6 @@ let Box = styled.div`
     width: 1100px;
     height: 700px;
     margin-top: 50px;
-    /* border-right: black 2px solid;
-    border-left: black 2px solid;
-    border-top: black 2px solid;
-    border-bottom: black 2px solid; */
     display: flex;
     flex-direction: row;
 `
