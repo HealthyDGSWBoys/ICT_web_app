@@ -9,103 +9,75 @@ export const Root = styled.div`
 `;
 
 export const Main = styled.div`
-  width: 70%;
+  width: 80%;
 `;
 
 export const Top = styled.div`
   width: 100%;
-  height: 50px;
-
+  height: 40px;
   padding-bottom: 10px;
   border-bottom: 3px solid black;
-
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
 `;
 
 export const SearchContainer = styled.div`
-  width: 70%;
+  width: 60%;
   height: 100%;
 `;
 
 export const SearchBar = styled.input`
-  width: calc(100% - 50px);
+  width: 80%;
   height: 100%;
 
-  background-color: #f1f1f1;
-
-  border-radius: 20px 0px 0px 20px;
   border: none;
+  border-bottom: 2px solid #0A1E40;
   padding-left: 10px;
-
   box-sizing: border-box;
-
   outline: none;
   font-size: 15px;
 `;
 
 export const Search = styled.button`
-  width: 50px;
+  width: 20%;
   height: 100%;
-
-  color: black;
-  background-color: #f1f1f1;
-
+  background-color: #0A1E40;
+  color: #eee;
   border: none;
-  border-radius: 0px 20px 20px 0px;
+  border-radius: 0px 15px 15px 0px;
   padding-right: 8px;
   box-sizing: border-box;
-
   cursor: pointer;
-  :hover {
-    transition: 0.5s;
-    background-color: yellow;
-  }
 `;
 
 export const Register = styled.button`
-  width: 15%;
+  width: 10%;
   height: 100%;
-
-  background-color: purple;
+  background-color: #0A1E40;
   color: white;
-
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   box-sizing: border-box;
-  padding-right: 8px;
-
+  padding: 10px;
   cursor: pointer;
-  :hover {
-    transition: 0.5s;
-    background-color: yellow;
-  }
 `;
 
 export const Options = styled.button`
   width: 10%;
   height: 100%;
-  background-color: black;
+  background-color: #0A1E40;
   color: white;
-
   border: none;
-  border-radius: 20px;
-
+  border-radius: 10px;
+  padding: 10px;
   cursor: pointer;
-  :hover {
-    transition: 0.5s;
-    background-color: yellow;
-    color: black;
-  }
 `;
 
 export const Questions = styled.div`
   width: 100%;
   height: auto;
-  margin-top: 10px;
-
   display: flex;
   flex-direction: column;
-
   cursor: pointer;
 `;
