@@ -36,5 +36,6 @@ export const Title = styled.h1`
 
 export const Muscle = styled.h3`
   float: right;
+  color: #888;
   font-size: 13px;
 `;

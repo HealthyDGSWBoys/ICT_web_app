@@ -11,7 +11,10 @@ const Render = ({info}) => {
         difficulty={info.difficulty}
         risk={info.risk}
       />
-      <Explanation />
+      <Explanation 
+        explanation={info.explanation}
+        precautions={info.precautions}
+      />
       <Recommand />
     </S.MainContainer>
   );

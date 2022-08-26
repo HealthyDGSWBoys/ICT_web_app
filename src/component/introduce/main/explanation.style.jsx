@@ -3,10 +3,8 @@ import styled from "styled-components";
 export const Explanation = styled.div`
   width: calc(90% - 5px);
   height: 30%;
-
-  background-color: #ffcccc;
   color: black;
-
+  padding: 20px;
   border-radius: 15px;
 
   font-size: 15px;
@@ -29,5 +27,5 @@ export const Text = styled.div`
   margin-top: 10px;
   font-size: 13px;
   line-height: 20px;
-  color: black;
+  color: #333;
 `;
