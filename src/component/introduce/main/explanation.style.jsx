@@ -6,7 +6,7 @@ export const Explanation = styled.div`
   color: black;
   padding: 20px;
   border-radius: 15px;
-  background-color: rgb(214, 214, 239);
+  background-color: #E3E2B4;
   box-shadow: inset 1px 1px 1px #00000033;
   font-size: 15px;
   font-weight: bolder;

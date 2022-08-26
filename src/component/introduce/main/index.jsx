@@ -29,7 +29,7 @@ const Render = ({ info }) => {
           <S.Title>{title}</S.Title>
         </S.InfoContainer>
       </S.DisplayContainer>
-      <Info  info={dummy}/>
+      <Info info={dummy}/>
     </S.MainContainer>
   );
 };

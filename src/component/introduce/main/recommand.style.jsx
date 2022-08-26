@@ -9,7 +9,7 @@ export const Thumbnail = styled.div`
 export const Main = styled.div`
   width: 90%;
   height: calc(20% - 11px);
-  background-color: #cff6ff;
+  background-color: #A2B59F;
   margin-bottom: 11px;
   display: flex;
   justify-content: space-between;

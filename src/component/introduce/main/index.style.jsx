@@ -34,6 +34,7 @@ export const Title = styled.h1`
   font-size: 20px;
   margin-top: 5px;
   left: 0;
+  color: #222;
 `;
 
 export const Muscle = styled.h3`
