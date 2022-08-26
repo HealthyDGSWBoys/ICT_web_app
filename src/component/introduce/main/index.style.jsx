@@ -20,16 +20,21 @@ export const AppContainer = styled.div`
 export const InfoContainer = styled.div`
   width: 100%;
   position: relative;
+  height: 30px;
+  align-items: center;
+  gap: 5px;
   display: flex;
   flex-direction: row-reverse;
 `;
 
 export const Title = styled.h1`
   position: absolute;
+  font-size: 20px;
+  margin-top: 5px;
   left: 0;
 `;
 
 export const Muscle = styled.h3`
   float: right;
-  margin-left: 10px;
+  font-size: 13px;
 `;
