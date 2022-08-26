@@ -1,10 +1,7 @@
 import * as S from "./explanation.style";
 import Data from "../pushup.json";
 
-const Render = ({
-  explanation,
-  precautions
-}) => {
+const Render = ({ explanation, precautions }) => {
   return (
     <>
       <S.Explanation>

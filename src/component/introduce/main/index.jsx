@@ -5,7 +5,7 @@ import animation from "../../../static/introduce/animation/test.json";
 import * as S from "./index.style";
 import Info from "./info";
 
-import dummy from '../pushup.json'
+import dummy from "../pushup.json";
 
 const Render = ({ info }) => {
   const { title, muscle } = info;
@@ -29,7 +29,7 @@ const Render = ({ info }) => {
           <S.Title>{title}</S.Title>
         </S.InfoContainer>
       </S.DisplayContainer>
-      <Info info={dummy}/>
+      <Info info={dummy} />
     </S.MainContainer>
   );
 };

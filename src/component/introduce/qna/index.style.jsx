@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+import search from "../../../static/introduce/icons/search.svg";
+import filter from "../../../static/introduce/icons/filter.svg";
+import edit from "../../../static/introduce/icons/edit.svg";
+
 export const Root = styled.div`
   width: 100%;
   margin-top: 100px;
@@ -32,7 +36,7 @@ export const SearchBar = styled.input`
   height: 100%;
 
   border: none;
-  border-bottom: 2px solid #0A1E40;
+  border-bottom: 2px solid #0a1e40;
   padding-left: 10px;
   box-sizing: border-box;
   outline: none;
@@ -42,36 +46,48 @@ export const SearchBar = styled.input`
 export const Search = styled.button`
   width: 20%;
   height: 100%;
-  background-color: #0A1E40;
+  background-color: #0a1e40;
   color: #eee;
   border: none;
   border-radius: 0px 15px 15px 0px;
   padding-right: 8px;
   box-sizing: border-box;
   cursor: pointer;
+
+  background-image: url(${search});
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
 export const Register = styled.button`
   width: 10%;
   height: 100%;
-  background-color: #0A1E40;
+  background-color: #0a1e40;
   color: white;
   border: none;
   border-radius: 10px;
   box-sizing: border-box;
   padding: 10px;
   cursor: pointer;
+
+  background-image: url(${edit});
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
 export const Options = styled.button`
   width: 10%;
   height: 100%;
-  background-color: #0A1E40;
+  background-color: #0a1e40;
   color: white;
   border: none;
   border-radius: 10px;
   padding: 10px;
   cursor: pointer;
+
+  background-image: url(${filter});
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
 export const Questions = styled.div`
