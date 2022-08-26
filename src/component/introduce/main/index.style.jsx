@@ -15,6 +15,8 @@ export const DisplayContainer = styled.div`
 export const AppContainer = styled.div`
   width: 100%;
   height: 80vh;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 `;
 
 export const InfoContainer = styled.div`

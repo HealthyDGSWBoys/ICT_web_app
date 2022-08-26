@@ -6,12 +6,10 @@ export const Explanation = styled.div`
   color: black;
   padding: 20px;
   border-radius: 15px;
-
+  background-color: rgb(214, 214, 239);
+  box-shadow: inset 1px 1px 1px #00000033;
   font-size: 15px;
   font-weight: bolder;
-
-  /* border-radius: 8px; */
-
   padding-left: 10px;
   padding-top: 5px;
   box-sizing: border-box;
@@ -20,6 +18,7 @@ export const Explanation = styled.div`
     margin-top: 5px;
     margin-bottom: 0px;
     font-size: 15px;
+    color: rgb(220, 70, 70)
   }
 `;
 
