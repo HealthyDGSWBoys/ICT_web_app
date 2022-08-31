@@ -6,11 +6,10 @@ import NavBar from '../common/NavBar'
 import Footer from '../common/Footer'
 
 import routes from './routes'
-import test from "../component/test";
 
 const Core = styled.div`
   margin-top: ${props => props.nav ? "50" : "0"}px;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
 `
 const Content = styled.div`
