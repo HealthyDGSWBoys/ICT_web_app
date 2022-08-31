@@ -3,6 +3,7 @@ import Test from '../component/test'
 import NotFound from "../common/NotFound"
 import Record from '../component/record'
 import Introduce from "../component/introduce"
+import Recommend from '../component/recommend/Recommend'
 
 export default [
     { path: "", component: <Main />, nav: true, footer: true },
@@ -10,10 +11,11 @@ export default [
     { path: "test", component: <Test />, nav: true, footer: true },
     { path: "record", component: <Record />, nav: true, footer: true },
     { path: "introduce", component:<Introduce/>, nav:true, footer:true },
+    { path: "recommend", component:<Recommend/>, nav:true, footer:true }
 ]
 
-// ì´ê³³ì— ì»´í¬ë„ŒíŠ¸ë¥¼ ë“±ë¡í•˜ë©´ ë©ë‹ˆë‹¤
-// path: ì»´í¬ë„ŒíŠ¸ê°€ ë‚˜ì˜¬ url
-// component: ë„ì›Œì¤„ ì»´í¬ë„ŒíŠ¸
-// nav: ë„¤ë¸Œë°”ë¥¼ ë„ì›Œì¤„ì§€
-// footer: í‘¸í„°ë¥¼ ë„ì›Œì¤„ì§€
+// ÀÌ°÷¿¡ ÄÄÆ÷³ÍÆ®¸¦ µî·ÏÇÏ¸é µË´Ï´Ù
+// path: ÄÄÆ÷³ÍÆ®°¡ ³ª¿Ã url
+// component: ¶ç¿öÁÙ ÄÄÆ÷³ÍÆ®
+// nav: ³×ºê¹Ù¸¦ ¶ç¿öÁÙÁö
+// footer: ÇªÅÍ¸¦ ¶ç¿öÁÙÁö
