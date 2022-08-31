@@ -3,6 +3,9 @@ import Question from "./question";
 import comment from "../comment.json";
 import { useState } from "react";
 
+import search from "../../../static/introduce/icons/search.svg";
+import filter from "../../../static/introduce/icons/filter.svg";
+import edit from "../../../static/introduce/icons/edit.svg";
 const Render = () => {
   const [getComment, setCommnet] = useState(comment);
 
@@ -12,15 +15,10 @@ const Render = () => {
         <S.Top>
           <S.SearchContainer>
             <S.SearchBar type="text" placeholder="Search"></S.SearchBar>
-            {/* <S.Search>검색</S.Search> */}
-            <S.Search />
+            <S.SearchButton image={search}/>
           </S.SearchContainer>
-
-          {/* <S.Options>옵션</S.Options>
-          <S.Register>등록</S.Register> */}
-
-          <S.Options />
-          <S.Register />
+          <S.FunctionButton image={filter}/>
+          <S.FunctionButton image={edit}/>
         </S.Top>
         <S.Questions>
           <Question questions={getComment} />

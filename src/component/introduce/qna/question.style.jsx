@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const QuestionContainer = styled.div`
   width: calc(100% - 20px);
   height: 60%;
