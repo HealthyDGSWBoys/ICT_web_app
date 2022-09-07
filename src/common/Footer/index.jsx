@@ -8,7 +8,7 @@ import DUCAMIImg from './DUCAMIImg.png';
 const Render = () => {
     const[footerLink, setFooterLink] = useState([
         {
-            name: '홈', link: ''
+            name: 'home', link: ''
         },
         {
             name: 'introduce', link: 'introduce'
