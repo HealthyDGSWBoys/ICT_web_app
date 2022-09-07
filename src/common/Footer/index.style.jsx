@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export const Main = styled.div`
   width: 100vw;
   height: 150px;
-  background-color: black;
+  background-color: #0A1E40;
   //border-top: solid 2px black;
 `
 
@@ -14,7 +14,7 @@ export const Linked = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: solid 1px white;
+  border-bottom: solid 1px #D9D9D9;
 `
 
 export const A = styled(Link)`
@@ -25,7 +25,7 @@ export const A = styled(Link)`
     text-decoration:underline;
   }
   font-weight: bold;
-  color: white;
+  color: #D9D9D9;
 `
 
 export const FooterImgPart = styled.img`
@@ -45,10 +45,10 @@ export const SchoolText = styled.div`
   font-size: 15px;
   margin-left: 40px;
   margin-right: 40px;
-  color: white;
+  color: #D9D9D9;
 `
 
 export const DucamiText = styled.div`
   font-size: 15px;
-  color: white;
+  color: #D9D9D9;
 `

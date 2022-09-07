@@ -6,6 +6,7 @@ import schoolImg from './schoolImg.png';
 import DUCAMIImg from './DUCAMIImg.png';
 
 const Render = () => {
+    
     const[footerLink, setFooterLink] = useState([
         {
             name: 'home', link: ''
@@ -20,6 +21,7 @@ const Render = () => {
             name: 'record', link: 'record'
         }
     ])
+    
     return (
         <I.Main>
 
