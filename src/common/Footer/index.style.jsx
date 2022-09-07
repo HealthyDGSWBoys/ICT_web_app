@@ -42,13 +42,15 @@ export const IntroduceBy = styled.div`
 `
 
 export const SchoolText = styled.div`
-  font-size: 15px;
+  font-size: 14px;
   margin-left: 40px;
   margin-right: 40px;
   color: #D9D9D9;
+  font-weight: bold;
 `
 
 export const DucamiText = styled.div`
-  font-size: 15px;
+  font-size: 14px;
   color: #D9D9D9;
+  font-weight: bold;
 `
