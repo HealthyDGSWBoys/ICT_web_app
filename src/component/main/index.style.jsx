@@ -1,5 +1,4 @@
 import styled, { keyframes } from "styled-components";
-import background from './bg.jpg'
 const titleAnimation = keyframes`
     0% { 
         transform: translate(-1000, 0);
@@ -25,10 +24,13 @@ export const Main = styled.div`
     align-items: left;
     flex-direction: column;
     box-sizing: border-box;
-
-    /* filter: brightness(50%); */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url(${background});
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url(${(props) => props.bg});
     background-size: cover;
+`
+export const line = styled.div`
+    width: 100vw;
+    height: 15px;
+    background-color: #a8a8a8;
 `
 export const BackgroundImage = styled.img`
     width: 100vw;
@@ -86,4 +88,30 @@ export const startButton = styled.div`
     &:hover {
         opacity: 0.8
     }
+`
+export const container = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`
+export const mainTitle2 = styled.span`
+    font-size: 55px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    color: #dadada;
+`
+export const exerciseContainer = styled.div`
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: space-evenly;
+`
+export const exerciseBox = styled.div`
+    width: 21%;
+    aspect-ratio: 1 / 1;
+    background-color: white;
+
 `
