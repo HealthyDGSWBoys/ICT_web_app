@@ -100,9 +100,11 @@ export const mainTitle2 = styled.span`
     margin-left: 40px;
     margin-bottom: 40px;
     color: #dadada;
+    transition: .5s all;
 `
 export const exerciseContainer = styled.div`
     width: 30%;
+    min-width: 450px;
     height: auto;
     display: flex;
     flex-wrap: wrap;
@@ -112,6 +114,18 @@ export const exerciseContainer = styled.div`
 export const exerciseBox = styled.div`
     width: 21%;
     aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     background-color: white;
-
+    border-radius: 5px;
+    box-shadow: 3px;
+    cursor: pointer;
+    &:hover {
+    }
+`
+export const pictogramImg = styled.img`
+    width: 80%;
+    aspect-ratio: 1 / 1;
 `
