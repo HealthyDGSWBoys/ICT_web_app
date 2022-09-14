@@ -41,7 +41,7 @@ const Render = () => {
                 <S.textBox>
                     <S.container>
                         <S.mainTitle2 data-aos='zoom-in-up'>{exerciseName}</S.mainTitle2>
-                            <S.exerciseContainer>
+                            <S.exerciseContainer onMouseLeave={() => {setExerciseName('Choose Your Exercise')}}>
                                 {exerciseList.map((item, idx) => {
                                     return (
                                         <>
@@ -50,8 +50,7 @@ const Render = () => {
                                             data-aos-duration='30'
                                             data-aos-delay='500'
                                             key={idx}
-                                            onMouseEnter={() => {setExerciseName(exerciseList[idx])}}
-                                            onMouseLeave={() => {setExerciseName('Choose Your Exercise')}}>
+                                            onMouseEnter={() => {setExerciseName(exerciseList[idx])}}>
                                                 <S.pictogramImg src={pictogramList[idx]}/>
                                             </S.exerciseBox>
                                         </>
