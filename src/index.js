@@ -5,6 +5,7 @@ import App from './App.jsx';
 import './index.css'
 import GlobalFonts from './styles/fonts/pretendard'
 
+import axios from "axios";
 
 ReactDOM.createRoot(
 document.getElementById("app")).
@@ -14,3 +15,4 @@ document.getElementById("app")).
             <App />
         </React.StrictMode>
     )
+axios.defaults.baseURL = "/api";
