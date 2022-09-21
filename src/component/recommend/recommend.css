@@ -8,5 +8,6 @@
 }
 
 .box {
-	animation: box-ani 1s linear reverse;
+	animation: box-ani 500ms linear reverse;
 }
+

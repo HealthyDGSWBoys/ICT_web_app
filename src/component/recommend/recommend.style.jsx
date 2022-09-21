@@ -50,26 +50,23 @@ export const ExerciseImg = styled.img`
     background-color: white;
 `
 
-export const FoodImg = styled.img`
-    width: 300px;
-    height: 300px;
-    background-color: white;
+export const FoodImg = styled.div`
+    width: 100%;
+    height: 40%;
+    display: flex;
+    background-color: #787878;
+    padding: 10px;
+    border-radius: 10px;
 `
 
-export const ExerciseTit = styled.h2`
+export const Title = styled.h2`
     margin-top: 50px;
 `
 
-export const ExerciseCom = styled.h3`
+export const Title_Datail = styled.h3`
+    font-size: 17px;
     margin-top: 40px;
-`
-
-export const FoodTit = styled.h2`
-    margin-top: 50px;
-`
-
-export const FoodCom = styled.h3`
-    margin-top: 40px;
+    line-height: 30px; 
 `
 
 export const Comment = styled.div`
@@ -92,4 +89,27 @@ export const Text = styled.h1`
 export const Detail = styled.h3`
     font-size: 17px;
     margin-top: -10px;
+`
+
+export const LargeImgPart = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+`
+
+export const SmallImgPart = styled.div`
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+`
+
+export const Img1 = styled.img`
+    width: 90%;
+    height: 100%;
+    margin:10px;
+    &:hover{
+        filter: brightness(90%);
+    }
 `
