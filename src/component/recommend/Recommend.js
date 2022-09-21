@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 
 import * as R from './recommend.style.jsx'
+import './recommend.css'
 
 function Recommend(){
 
@@ -44,19 +45,31 @@ function Recommend(){
         <R.HeadBox>
             <R.Box>
                 
-                <R.ExercisePart>
+                <R.ExercisePart className="box">
                     <R.ExerciseImg src={exerciseImg}></R.ExerciseImg>
                     <R.ExerciseTit>{exerciseName}</R.ExerciseTit>
                     <R.ExerciseCom>{exerciseExplain}</R.ExerciseCom>
                 </R.ExercisePart>
 
-                <R.FoodPart>
+                <R.FoodPart className="box">
                     <R.FoodImg src={foodImg}></R.FoodImg>
                     <R.FoodTit>{foodName}</R.FoodTit>
                     <R.FoodCom>{foodExplain}</R.FoodCom>
                 </R.FoodPart>
-
+                
             </R.Box>
+
+            <R.Comment className="box">
+                <R.Text>오늘은 '이거' 어때요?</R.Text>
+                {/* <R.Detail>오늘 추천드리는</R.Detail>
+                <R.Detail>운동과 음식입니다</R.Detail> */}
+                <R.Detail>오늘,</R.Detail>
+                <R.Detail>어떤 운동을 하거나</R.Detail>
+                <R.Detail>어떤 음식을 먹을지</R.Detail>
+                <R.Detail>고민이셨던 분들을 위한</R.Detail>
+                <R.Detail>'오늘의 추천 사항'</R.Detail>
+            </R.Comment>
+
         </R.HeadBox>
         
     )

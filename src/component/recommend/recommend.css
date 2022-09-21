@@ -1,0 +1,12 @@
+@keyframes box-ani {
+	from {
+		transform: translate(0, 0);
+	}
+	to {
+		transform: translate(100px, 100px);
+	}
+}
+
+.box {
+	animation: box-ani 1s linear reverse;
+}
