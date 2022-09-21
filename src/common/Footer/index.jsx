@@ -30,7 +30,7 @@ const Render = () => {
                 {
                     footerLink.map((a, i)=>{
                         return(
-                            <I.A to={a.link}>{a.name}</I.A>
+                            <I.A to={a.link} key={i}>{a.name}</I.A>
                         )
                     })
                 }
