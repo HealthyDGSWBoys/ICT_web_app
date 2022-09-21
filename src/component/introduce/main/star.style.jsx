@@ -16,11 +16,9 @@ export const StarContainer = styled.div`
   text-align: center;
   align-items: center;
   justify-content: left;
-
   width: 100%;
   height: 50px;
   background-color: white;
-
   border-radius: 8px;
 
   h4: {
