@@ -1,9 +1,9 @@
-import Main from '../component/main'
-import Test from '../component/test'
+import Main from '../components/main'
+import Test from '../components/test'
 import NotFound from "../common/NotFound"
-import Record from '../component/record'
-import Introduce from "../component/introduce"
-import Recommend from '../component/recommend/Recommend'
+import Record from '../components/record'
+import Introduce from "../components/introduce"
+import Recommend from '../components/recommend/Recommend'
 
 export default [
     { path: "", component: <Main />, nav: true, footer: true },
@@ -14,8 +14,8 @@ export default [
     { path: "recommend", component:<Recommend/>, nav:true, footer:true }
 ]
 
-// ÀÌ°÷¿¡ ÄÄÆ÷³ÍÆ®¸¦ µî·ÏÇÏ¸é µË´Ï´Ù
-// path: ÄÄÆ÷³ÍÆ®°¡ ³ª¿Ã url
-// component: ¶ç¿öÁÙ ÄÄÆ÷³ÍÆ®
-// nav: ³×ºê¹Ù¸¦ ¶ç¿öÁÙÁö
-// footer: ÇªÅÍ¸¦ ¶ç¿öÁÙÁö
+// ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½Ë´Ï´ï¿½
+// path: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ url
+// component: ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+// nav: ï¿½×ºï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+// footer: Çªï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
