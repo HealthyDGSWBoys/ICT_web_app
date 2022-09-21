@@ -3,6 +3,7 @@
     기본값은 null
     값: ReactComponent
 */
+import { atom } from "recoil"
 export default atom({
     key: "modal",
     default: null,

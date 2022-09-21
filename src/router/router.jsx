@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { useState, useLayoutEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
+import modal from '../global/modal'
+import { useRecoilState } from 'recoil';
 
 import NavBar from '../common/NavBar'
 import Footer from '../common/Footer'
@@ -15,12 +17,21 @@ const Core = styled.div`
 const Content = styled.div`
   display: flex;
 `
+const Modal = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+`
 const Router = () => {
   const location = useLocation()
   const [renderInfo, setRenderInfo] = useState({
       nav: false,
       Footer: false
   })
+  const [getModal, setModal] = useRecoilState(modal)
   useLayoutEffect((element) => {
       let temp = routes.find(element => element.path === location.pathname.split('/')[1])
       if(temp === undefined) {
@@ -30,6 +41,10 @@ const Router = () => {
   }, [location.pathname])
   return (
     <>
+      { getModal === null ? <></> : 
+      <>
+          <Modal/>
+      </>}
       <Content>
           { renderInfo.nav ? <NavBar/> : null}
           <Core nav={renderInfo.nav}>
@@ -45,7 +60,7 @@ const Router = () => {
               </Routes>
           </Core>
       </Content>
-        { renderInfo.nav ? <Footer/> : null}
+      { renderInfo.nav ? <Footer/> : null}
     </>
   )
 }

@@ -3,6 +3,7 @@
     기본값은 null
     형식
 */
+import { atom } from "recoil"
 export default atom({
     key: "user",
     default: null,
