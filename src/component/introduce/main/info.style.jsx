@@ -4,7 +4,7 @@ export const MainContainer = styled.div`
   width: 30%;
   height: 80vh;
   display: flex;
-  background-color: #BFC8D7;
+  background-color: #233c68;;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   flex-direction: column;

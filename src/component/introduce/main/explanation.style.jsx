@@ -3,10 +3,9 @@ import styled from "styled-components";
 export const Explanation = styled.div`
   width: calc(90% - 5px);
   height: 30%;
-  color: black;
   padding: 20px;
   border-radius: 15px;
-  background-color: #E3E2B4;
+  background-color: #bdd0f0;
   box-shadow: inset 1px 1px 1px #00000033;
   font-size: 15px;
   font-weight: bolder;
