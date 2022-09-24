@@ -8,7 +8,6 @@ import Info from "./info";
 import dummy from "../pushup.json";
 
 const Render = ({ info }) => {
-  const { title, muscle } = info;
   const dom = useRef();
   let app;
 
@@ -23,13 +22,13 @@ const Render = ({ info }) => {
       <S.DisplayContainer>
         <S.AppContainer ref={dom} />
         <S.InfoContainer>
-          {muscle.map((element, idx) => {
+          {info.muscle.map((element, idx) => {
             return <S.Muscle key={idx}>{element}</S.Muscle>;
           })}
-          <S.Title>{title}</S.Title>
+          <S.Title>{info.title}</S.Title>
         </S.InfoContainer>
       </S.DisplayContainer>
-      <Info info={dummy} />
+      <Info info={info} />
     </S.MainContainer>
   );
 };

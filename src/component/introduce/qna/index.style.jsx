@@ -39,6 +39,7 @@ export const SearchBar = styled.input`
   outline: none;
   font-size: 15px;
 `;
+
 export const FunctionButton = styled.button`
   width: 10%;
   height: 100%;
@@ -48,18 +49,18 @@ export const FunctionButton = styled.button`
   border-radius: 10px;
   padding: 10px;
   cursor: pointer;
-  background-image: url(${({image}) => image});
+  background-image: url(${({ image }) => image});
   background-repeat: no-repeat;
   background-position: center;
   &:hover {
     background-color: #233c68;
   }
-`
+`;
+
 export const SearchButton = styled(FunctionButton)`
   width: 13%;
   border-radius: 0 10px 10px 0;
-
-`
+`;
 
 export const Questions = styled.div`
   width: 100%;
