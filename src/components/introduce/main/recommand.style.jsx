@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Thumbnail = styled.div`
   width: 100%;
@@ -9,21 +9,11 @@ export const Thumbnail = styled.div`
 export const Main = styled.div`
   width: 90%;
   height: calc(20% - 11px);
-
-  border-radius: 0px 0px 8px 8px;
-
-  background-color: #cfffe5;
+  background-color: #A2B59F;
   margin-bottom: 11px;
-
   display: flex;
   justify-content: space-between;
-`;
-
-export const SplitLine = styled.div`
-  width: 20px;
-  height: 100%;
-
-  background-color: white;
+  border-radius: 15px;
 `;
 
 export const Title = styled.h4`
@@ -33,19 +23,30 @@ export const Title = styled.h4`
 
 export const RecommandBox = styled.div`
   width: 100%;
-  height: 85%;
+  height: 100%;
+  background-image: url${({img}) => img};
+
 `;
 
-export const Link = styled.a`
-  display: flex;
-  justify-content: center;
-  margin-top: 5px;
-
-  text-decoration: underline;
-  color: black;
-
-  :hover {
-    color: blue;
-    transition: 0.5s;
+export const RecommandModalLeft = styled.div`
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: 500ms;
+  &:hover {
+    background-color: #444b;
   }
-`;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+`
+export const RecommandModalRight = styled.div`
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: 500ms;
+  &:hover {
+    background-color: #444b;
+  }
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+`

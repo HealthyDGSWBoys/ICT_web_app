@@ -1,20 +1,43 @@
-import Main from './main'
-import QnA from './qna'
-import * as S from './index.style'
-import human from 'skeletalmuscle-drawer/dist/human.gltf'
-const dummy = {
-    title: "팔굽혀펴기",
-    muscle: ["대흉근", "삼두근", "삼각근", "복근", "전거근", "광배근"],
-    human: human,
-}
+import Main from "./main";
+import QnA from "./qna";
+import * as S from "./index.style";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import dummy from './pushup.json'
+
 const Render = () => {
-    return (
-        <S.Root>
-            <S.Container>
-                <Main info={dummy}/>
-                <QnA/>
-            </S.Container>
-        </S.Root>
-    )
-}
-export default Render
+  // const dummy = {
+  //   title: null,
+  //   muscle: [],
+  //   difficulty: null,
+  //   readiness: null,
+  //   risk: null,
+  //   explanation: null,
+  //   precautions: null,
+  // };
+
+  const [getInfo, setInfo] = useState(dummy);
+
+  useEffect(() => {
+    axios
+      .get("/under")
+      .then(function (res) {
+        const d = res.data.data;
+        d.muscle = d.muscle.split("/");
+        setInfo(d);
+      })
+      .catch(function (error) {
+        console.log("get dummy Error")
+      });
+  }, []);
+
+  return (
+    <S.Root>
+      <S.Container>
+        <Main info={getInfo} />
+        <QnA />
+      </S.Container>
+    </S.Root>
+  );
+};
+export default Render;

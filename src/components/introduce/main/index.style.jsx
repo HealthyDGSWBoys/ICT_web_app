@@ -15,21 +15,30 @@ export const DisplayContainer = styled.div`
 export const AppContainer = styled.div`
   width: 100%;
   height: 80vh;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 `;
 
 export const InfoContainer = styled.div`
   width: 100%;
   position: relative;
+  height: 30px;
+  align-items: center;
+  gap: 5px;
   display: flex;
   flex-direction: row-reverse;
 `;
 
 export const Title = styled.h1`
   position: absolute;
+  font-size: 20px;
+  margin-top: 5px;
   left: 0;
+  color: #222;
 `;
 
 export const Muscle = styled.h3`
   float: right;
-  margin-left: 10px;
+  color: #888;
+  font-size: 13px;
 `;

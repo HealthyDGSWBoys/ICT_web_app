@@ -20,7 +20,7 @@ const RecordMain = () => {
   }
 
   useEffect(() => {
-    console.log(inView);
+    // console.log(inView);
   }, [inView]);
 
   // 정방형 사진이여야만 한다
@@ -46,11 +46,7 @@ const RecordMain = () => {
 
   /** 날짜를 문자열로 받아서 년.월.일 의 형태로 반환하는 함수 */
   function makeDateForm(key) {
-    return [
-      Number(key.slice(0, 2)),
-      Number(key.slice(2, 4)),
-      Number(key.slice(4, 6)),
-    ].join(" . ");
+    return [Number(key.slice(0, 2)), Number(key.slice(2, 4)), Number(key.slice(4, 6))].join(" . ");
   }
 
   useEffect(() => {
@@ -69,23 +65,15 @@ const RecordMain = () => {
   return (
     <R.Wrapper>
       {modalVisible && (
-        <Modal
-          name="hi"
-          onClose={closeModal}
-          maskCloseable={true}
-          visible="true"
-          menu="안녕"
-        >
-         <Write/>
+        <Modal name="hi" onClose={closeModal} maskCloseable={true} visible="true" menu="안녕">
+          <Write />
         </Modal>
       )}
 
       <R.Content>
         <R.WriteB onClick={openModal}>
           <R.WirteBPlus>+</R.WirteBPlus>
-          <R.WirteBComment >
-            오늘 작성된 기록이 없습니다
-          </R.WirteBComment>
+          <R.WirteBComment>오늘 작성된 기록이 없습니다</R.WirteBComment>
         </R.WriteB>
         {dum.map((i, idx) => (
           <Link key={i} to={`${username}/${i}`}>
