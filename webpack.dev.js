@@ -18,8 +18,5 @@ module.exports = merge(common, {
             changeOrigin: true,
           },
       },
-  },
-  historyApiFallback: true,
-  port: 3000,
-  hot: true,
+  }
 });
