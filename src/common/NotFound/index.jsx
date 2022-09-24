@@ -1,4 +1,4 @@
 const Render = () => {
-    return <>404</>
-}
-export default Render
+  return <>404</>;
+};
+export default Render;

@@ -1,16 +1,20 @@
-import Main from '../component/main'
-import Test from '../component/test'
-import NotFound from "../common/NotFound"
-import Record from '../component/record'
-import Introduce from "../component/introduce"
+import Main from "../component/main";
+import Test from "../component/test";
+import NotFound from "../common/NotFound";
+import Record from "../component/record";
+import Introduce from "../component/introduce";
+import Bulletin from "../component/bulletin";
+import Write from "../component/introduce/write/index.jsx";
 
 export default [
-    { path: "", component: <Main />, nav: true, footer: true },
-    { path: "*", component: <NotFound />, nav: false, footer: false },
-    { path: "test", component: <Test />, nav: true, footer: true },
-    { path: "record", component: <Record />, nav: true, footer: true },
-    { path: "introduce", component:<Introduce/>, nav:true, footer:true },
-]
+  { path: "", component: <Main />, nav: true, footer: true },
+  { path: "*", component: <NotFound />, nav: false, footer: false },
+  { path: "test", component: <Test />, nav: true, footer: true },
+  { path: "record", component: <Record />, nav: true, footer: true },
+  { path: "introduce", component: <Introduce />, nav: true, footer: true },
+  { path: "introduce/:id", component: <Bulletin />, nav: true, footer: true },
+  { path: "write", component: <Write />, nav: true, footer: true },
+];
 
 // 이곳에 컴포넌트를 등록하면 됩니다
 // path: 컴포넌트가 나올 url

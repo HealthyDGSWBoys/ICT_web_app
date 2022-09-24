@@ -12,6 +12,7 @@ export const QuestionContainer = styled.div`
   padding: 10px;
   justify-content: center;
   transition: 300ms;
+  text-decoration: none;
   &:hover {
     background-color: rgba(10, 30, 64, 0.35);
   }
