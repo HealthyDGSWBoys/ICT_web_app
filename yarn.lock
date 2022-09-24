@@ -1271,6 +1271,11 @@
   "resolved" "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz"
   "version" "2.0.4"
 
+"@mediapipe/pose@^0.5.1635988162":
+  "integrity" "sha512-t0dpl+iG/MTPtPPxEYHyVWo+X7G+qgYUYaB4y9pxavQRNzuQQeHeSmUnT+A8qOKnuB0ccxgyrrFmGUaaL0F3wQ=="
+  "resolved" "https://registry.npmjs.org/@mediapipe/pose/-/pose-0.5.1635988162.tgz"
+  "version" "0.5.1635988162"
+
 "@types/body-parser@*":
   "integrity" "sha512-ALYone6pm6QmwZoAgeyNksccT9Q4AWZQ6PvfwR37GT6r6FWUPguq6sUmNGSMV2Wr761oQoBxwGGa6DR5o1DC9g=="
   "resolved" "https://registry.npmjs.org/@types/body-parser/-/body-parser-1.19.2.tgz"
@@ -5075,11 +5080,12 @@
   dependencies:
     "is-arrayish" "^0.3.1"
 
-"skeletalmuscle-drawer@^0.0.8":
-  "integrity" "sha512-8wW2zQLyNWiH+xPIgJEFy+tLhgGmKufeTjw0piM6YBXh1qY7HabCLAs71oQ2o7UbkZS1FOS1HyhUsOdon1flCw=="
-  "resolved" "https://registry.npmjs.org/skeletalmuscle-drawer/-/skeletalmuscle-drawer-0.0.8.tgz"
-  "version" "0.0.8"
+"skeletalmuscle-drawer@^0.1.7":
+  "integrity" "sha512-Hv7gErJN87WFybepMe3Rv88BP7pYeXLCAPIixHIG4hAX+Go6MmvcDWbScv2EPoCebIiWx8EdcyY3V9wc6hom3w=="
+  "resolved" "https://registry.npmjs.org/skeletalmuscle-drawer/-/skeletalmuscle-drawer-0.1.7.tgz"
+  "version" "0.1.7"
   dependencies:
+    "@mediapipe/pose" "^0.5.1635988162"
     "three" "^0.140.2"
 
 "sockjs@^0.3.24":

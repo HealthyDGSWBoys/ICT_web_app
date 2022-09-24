@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import * as W from "./index.style";
 
 const Write = () => {
+  window.scrollTo(0,0);
   const [paper, setPaper] = useState("");
   const [title, setTitle] = useState("");
   const textRef = useRef();

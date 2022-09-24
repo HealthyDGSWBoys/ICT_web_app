@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import * as S from "./member.style";
 export default ({ count, icon }) => {
   const [getStars, setStars] = useState(Array.from({ length: count }, (v, i) => i));
-  useState(() => {
+  useEffect(() => {
     setStars(Array.from({ length: count }, (v, i) => i));
   }, [count]);
   return (

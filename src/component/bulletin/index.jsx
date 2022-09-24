@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import * as B from "./index.style";
 
 const Render = () => {
+  window.scrollTo(0,0);
   const [paper, setPaper] = useState(
     "dfas&nbsp;&nbsp;&nbsp;dfsafdasdfsafsafsadf\n ## fsadf\n### fsadfsadf\n#### fsadfasd\n# adfsadfasdfsdfadfsad"
   );

@@ -3,17 +3,18 @@ import QnA from "./qna";
 import * as S from "./index.style";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import dummy from './pushup.json'
 
 const Render = () => {
-  const dummy = {
-    title: null,
-    muscle: [],
-    difficulty: null,
-    readiness: null,
-    risk: null,
-    explanation: null,
-    precautions: null,
-  };
+  // const dummy = {
+  //   title: null,
+  //   muscle: [],
+  //   difficulty: null,
+  //   readiness: null,
+  //   risk: null,
+  //   explanation: null,
+  //   precautions: null,
+  // };
 
   const [getInfo, setInfo] = useState(dummy);
 
@@ -26,8 +27,7 @@ const Render = () => {
         setInfo(d);
       })
       .catch(function (error) {
-        console.log("get dummy Error");
-        console.log(error);
+        console.log("get dummy Error")
       });
   }, []);
 

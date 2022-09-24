@@ -26,12 +26,11 @@ const Render = ({ readiness, difficulty, risk }) => {
   ]);
 
   useEffect(() => {
-    // const temp = [...getData];
-    // temp[0].count = readiness;
-    // temp[1].count = difficulty;
-    // temp[2].count = risk;
-    // setData(temp);
-    // console.log(temp);
+    const temp = [...getData];
+    temp[0].count = readiness;
+    temp[1].count = difficulty;
+    temp[2].count = risk;
+    setData(temp);
   }, []);
 
   return (
