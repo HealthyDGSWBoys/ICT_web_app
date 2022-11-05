@@ -1,17 +1,18 @@
 import React from "react";
 import H_img from '../Home/H_img/H_img.png'
 import './Home.css';
-
-function GoLogin(e){
-window.location.href='/Login'
-}
-
-function GoJoin(e){
-  window.location.href='/Join'
-}
+import { useNavigate } from "react-router-dom";
 
 
 const Home=()=>{
+  const navigate = useNavigate()
+  const GoLogin = () => {
+    navigate('/Login')
+  }
+  const GoJoin = () => {
+    navigate('/Join')
+  }
+  
 return(
 <div className="container">
   <div className="container_1">

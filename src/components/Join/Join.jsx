@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import * as st from './join.style';
 import backimg from './image/puple_sq.png';
+import * as S from './help'
 
 const Join = () => {
     <style>
@@ -11,9 +12,11 @@ const Join = () => {
         <div>
             <h1 style={st.title}>GYM in Metaverse</h1>
         </div>
-        
+        {/* <S.Container>
+            
+        </S.Container> */}
         <div style={st.center}>
-            <img src={backimg} alt="sign up" width="1058" height="1264"/>
+            <img src={backimg} alt="sign up" width="1058" height="1400"/>
             
             <label htmlFor="join" style={st.label}>JOIN</label>
 
@@ -58,7 +61,7 @@ const Join = () => {
                     </st.inputMidBirth>
                 <st.inputBot type="email" placeholder='Enter email'></st.inputBot>
             </div>
-
+{/* 
             <st.mobile>
                 <st.inputTopMobile>
                     <select name="countryCode" id="countryCode">
@@ -72,7 +75,7 @@ const Join = () => {
                     <input type="text" placeholder='Enter verification code'></input>
                     <div><st.btn>Check</st.btn></div>
                 </st.inputBotMobile>
-            </st.mobile>
+            </st.mobile> */}
 
         </div>
         

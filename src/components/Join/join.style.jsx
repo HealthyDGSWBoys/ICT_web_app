@@ -33,7 +33,7 @@ export const center = {
 
 export const label = {
     position : "absolute",
-    top : "5%",
+    top : "3%",
     left : "25%",
     color : "#ffffff",
     fontSize : "50px",
