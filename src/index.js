@@ -9,4 +9,3 @@ document.getElementById("app")).
     render(
         <App />
     )
-axios.defaults.baseURL = "/api";

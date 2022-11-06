@@ -8,7 +8,8 @@ export const title = {
     fontFamily: "'Inter', sans-serif",
     display : "flex",
     justifyContent : "center",
-    padding : "5%"
+    width: "400px",
+    margin: "50px"
 }
 
 export const body = {
@@ -16,6 +17,9 @@ export const body = {
     backgroundImage : "linear-gradient(155deg, #37228A 45%, #FF4BDD)",
     fontWeight: "900",
     fontFamily: "'Inter', sans-serif",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
 }
 
 export const center = {
@@ -32,9 +36,9 @@ export const center = {
 // }
 
 export const label = {
-    position : "absolute",
-    top : "3%",
-    left : "25%",
+    // position : "absolute",
+    // top : "3%",
+    // left : "25%",
     color : "#ffffff",
     fontSize : "50px",
     fontWeight: "900",
@@ -42,27 +46,19 @@ export const label = {
 }
 
 export const idPassword = {
-    position : "absolute",
     display : "flex",
     flexDirection : "column",
-    top : "14%",
-    left : "25%"
 }
 
 export const nameBirth = {
-    position : "absolute",
     display : "flex",
     flexDirection : "column",
-    top : "42%",
-    left : "25%"
 }
 
 
 
 export const inputTop = styled.input`
-    :: placeholder {
-        color : #C5C5C5;
-    }
+    ${({idExist}) => idExist ? "background-color: #fc7c77" : null};
     width : 800px;
     height : 98px;
     border : 1px solid;
@@ -72,6 +68,8 @@ export const inputTop = styled.input`
     font-family: 'Inter', sans-serif;
     font-size : 30px;
     text-indent : 3%;
+    border-bottom : 1px solid;
+    border-color : #C2B5F8;
 `
 
 export const inputMid = styled.input`
@@ -248,6 +246,7 @@ export const SignupBtnDiv = styled.div `
 `;
 
 export const signupBtnBtn = styled.button `
+    cursor: pointer;
     padding : 41px 250px;
     border : 1px solid #872DF0;
     border-radius : 30px;

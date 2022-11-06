@@ -13,8 +13,8 @@ module.exports = merge(common, {
       port: 3333,
       hot: true,
       proxy: {
-          "/api": {
-            target: "http://10.80.161.162:8000",
+          "/user": {
+            target: "http://localhost:8000",
             changeOrigin: true,
           },
       },

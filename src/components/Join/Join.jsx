@@ -2,33 +2,72 @@ import React, { Fragment } from 'react';
 import * as st from './join.style';
 import backimg from './image/puple_sq.png';
 import * as S from './help'
+import { useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 
 const Join = () => {
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-    </style>
+    const navigator = useNavigate()
+    const [values, setValues] = useState({
+        id: "",
+        password: "",
+        rePassword: "",
+        name: "",
+        email: ""
+    })
+    const [idExist, setExist] = useState(false)
+    const onChange = (event, name) => {
+        const v = event.target.value
+        if(name === "id" && v != "") {
+            axios.get('/user/idexist/' + event.target.value)
+            .then((res) => {
+                setExist(res.data.exist)
+            })
+        }
+        const temp = { ...values }
+        temp[name] = v
+        setValues(temp)
+    }
+    const onClick = () => {
+        if(
+            values.id != "" &&
+            values.password != "" &&
+            values.rePassword != "" &&
+            values.name != "" &&
+            values.email != ""
+        ) {
+            if(values.password === values.rePassword) {
+                axios.post(
+                    '/user/signup',
+                    values
+                ).then((res) => {
+                    alert("회원가입 성공")
+                    navigator('/Login')
+                })  
+            }
+            else {
+                alert("비밀번호가 일치하지 않습니다")
+            }
+        }
+        else {
+            alert("빈칸을 마저 채워주세요")
+        }
+    }
     return (
         <div style={st.body}>
-        <div>
-            <h1 style={st.title}>GYM in Metaverse</h1>
-        </div>
-        {/* <S.Container>
-            
-        </S.Container> */}
-        <div style={st.center}>
-            <img src={backimg} alt="sign up" width="1058" height="1400"/>
-            
+        <S.Container>
             <label htmlFor="join" style={st.label}>JOIN</label>
 
             <div style={st.idPassword}>
-                <st.inputTop placeholder='Id'></st.inputTop>
-                <st.inputMid type="password" placeholder='Password'></st.inputMid>
-                <st.inputBot type="password" placeholder='Re-enter password'></st.inputBot>
+                <st.inputTop idExist={idExist} placeholder='Id' onChange={(e) => onChange(e, "id")}></st.inputTop>
+                <st.inputMid type="password" onChange={(e) => onChange(e, "password")} placeholder='Password'></st.inputMid>
+                <st.inputBot type="password" onChange={(e) => onChange(e, "rePassword")} placeholder='Re-enter password'></st.inputBot>
             </div>
 
             <div style={st.nameBirth}>
-                <st.inputTop placeholder='Name'></st.inputTop>
-                    <st.inputMidBirth>
+                <st.inputTop placeholder='Name' onChange={(e) => onChange(e, "name")}></st.inputTop>
+                    {/* <st.inputMidBirth>
                       <label htmlFor="birth" id='birth' style={st.birth}>Birth</label>
                       <input type="number" placeholder='Year' />
                        <select name="birthMon" id="mon">
@@ -58,30 +97,13 @@ const Join = () => {
                             <option value="28">28</option> <option value="29">29</option>
                             <option value="30">30</option> <option value="31">31</option>
                         </select>
-                    </st.inputMidBirth>
-                <st.inputBot type="email" placeholder='Enter email'></st.inputBot>
+                    </st.inputMidBirth> */}
+                <st.inputBot type="email" placeholder='Enter email' onChange={(e) => onChange(e, "email")}></st.inputBot>
             </div>
-{/* 
-            <st.mobile>
-                <st.inputTopMobile>
-                    <select name="countryCode" id="countryCode">
-                        <option value="82">+82</option>
-                        <option value="672">+672</option>
-                    </select>
-                    <input type="tel" placeholder='Phone number'/>
-                    <div><st.btn>Send code</st.btn></div>
-                </st.inputTopMobile>
-                <st.inputBotMobile>
-                    <input type="text" placeholder='Enter verification code'></input>
-                    <div><st.btn>Check</st.btn></div>
-                </st.inputBotMobile>
-            </st.mobile> */}
-
-        </div>
-        
+        </S.Container>
 
         <st.SignupBtnDiv>
-            <st.signupBtnBtn>SIGN UP</st.signupBtnBtn>
+            <st.signupBtnBtn onClick={onClick}>JOIN</st.signupBtnBtn>
         </st.SignupBtnDiv>
 
         

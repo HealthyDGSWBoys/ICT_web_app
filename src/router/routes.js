@@ -6,8 +6,9 @@ import Home from '../components/Home/Home';
 
 export default [
   { path: "", component:  <Home />, nav: false, footer: false },
+  { path: "/", component:  <Home />, nav: false, footer: false },
   { path: "*", component: <NotFound />, nav: false, footer: false },
-  { path: "test", component: <Test />, nav: true, footer: true },
+  { path: "test", component: <Test />, nav: false, footer: true },
   { path:"Join", component:<Join />, nav: false, footer:false },
   { path:"Login",component: <Login />, nav: false, footer:false},
 ]
